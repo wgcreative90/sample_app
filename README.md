@@ -53,3 +53,9 @@ $ rails server
 For more information, see the
 [*Ruby on Rails Tutorial* book](https://www.railstutorial.org/book).
 ```
+
+Personal Dev Flow:
+
+`BRANCH: 1. (main) - Initialize repo, add gemfile, bundle without production, update readme, create basic hello action and set to root route, heroku login / create app / rename app/ push to heroku main, test deploy was a success,and add link to README. (next) => `
+
+`BRANCH: 2. (static-pages) - git checkout -b static-pages, continue course<TODO:...>`
