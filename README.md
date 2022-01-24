@@ -1,7 +1,6 @@
 # Ruby on Rails Tutorial: Sample application # 3
 
-## 
-    [sample_app](https://www.learnenough.com/course/ruby_on_rails_tutorial_6th_edition/static_pages/sample_app_setup?start_chapter=true "https://www.learnenough.com/course/ruby_on_rails_tutorial_6th_edition/static_pages/sample_app_setup?start_chapter=true")
+ [sample_app - Tutorial link](https://www.learnenough.com/course/ruby_on_rails_tutorial_6th_edition")
 
 * Ruby version: 2.7.5
 * System dependencies See Gemfile and update ruby version based on local system and bundler version based on local system versions. ``ruby -v`` and ``bundle -v`` in your terminal.
