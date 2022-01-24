@@ -10,6 +10,9 @@
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-*
+/db/*.pos-*
+/.vscode
+/.devcontainer
 
 # Ignore all logfiles and tempfiles.
 /log/*
