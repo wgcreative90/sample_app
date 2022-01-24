@@ -10,7 +10,6 @@
 #   timeout: 5000
 
 development:
-  <<: *default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %> || 5
   adapter: postgresql
   database: sample-app
