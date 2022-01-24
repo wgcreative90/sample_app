@@ -20,11 +20,13 @@ gem 'jbuilder',                   '2.10.0'
 gem 'bootsnap',                   '1.7.2', require: false
 
 group :development, :test do
+  gem 'pg'
   gem 'sqlite3', '1.4.2'
   gem 'byebug',  '11.1.3', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :development do
+  gem 'pg'
   gem 'web-console',        '4.1.0'
   gem 'rack-mini-profiler', '2.3.1'
   gem 'listen',             '3.4.1'
@@ -43,7 +45,7 @@ group :test do
 end
 
 group :production do
-  gem 'pg',         '1.2.3'
+  gem 'pg'
   gem 'aws-sdk-s3', '1.87.0', require: false
 end
 
