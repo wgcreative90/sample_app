@@ -2,7 +2,7 @@
 ```
 # Ruby on Rails Tutorial sample application
 
-This is the sample application for
+This is my [sample_app on Heroku](https://r-o-r-t-sample-app.herokuapp.com/) for
 [*Ruby on Rails Tutorial:
 Learn Web Development with Rails*](https://www.railstutorial.org/)
 (6th Edition)
