@@ -10,7 +10,7 @@
 #   timeout: 5000
 
 development:
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %> || 5
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   adapter: postgresql
   database: sample-app
   production: true
