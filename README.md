@@ -1,6 +1,6 @@
-
 ```
 # Ruby on Rails Tutorial sample application
+[Preview Image of Finished Sample App](https://softcover.s3.amazonaws.com/636/ruby_on_rails_tutorial_6th_edition/images/figures/home_page_with_feed.png")
 
 This is my [sample_app on Heroku running production](https://r-o-r-t-sample-app.herokuapp.com/) for
 [*Ruby on Rails Tutorial:
