@@ -60,4 +60,12 @@ Personal Dev Flow:
 
 `BRANCH: 2. (static-pages) - git checkout -b static-pages, continue course`
 
-`BRANCH: 3 .(advanced-testing-setup) - advanced testing`
+`BRANCH: 3 .(advanced-testing-setup) - advanced testing `
+
+Configs updated in main result in these changes when running tests: 
+
+![1643406520923.png](image/README/1643406520923.png)
+
+vs old configs:
+
+![1643406566950.png](image/README/1643406566950.png)
