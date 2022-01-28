@@ -1,14 +1,10 @@
-<%
-=begin%>
- <% provide(:title, "Page Title") %> 
-<%
-=end%>
+<% provide(:title, "Home") %>
 <!DOCTYPE html>
- <html lang="en">
+<html>
   <head>
     <title>
-      Home | Ruby on Rails Tutorial Sample App
-      </title>
+      <%= yield(:title) %> | Ruby on Rails Tutorial Sample App
+    </title>
   </head>
   <body>
     <div>
@@ -20,7 +16,7 @@
     </p>
     </div>
   </body>
-</html>
+  </html>
 
 
 
