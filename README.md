@@ -62,7 +62,14 @@ Personal Dev Flow:
 
 `BRANCH: 3 .(advanced-testing-setup) - advanced testing `
 
-Configs updated in main result in these changes when running tests: 
+`- Running Guard: run: guard and then hit return`
+
+```
+$ bin/spring stop    # Try this if the tests mysteriously start failing.
+$ bundle _2.2.17_ exec guard
+```
+
+Configs updated in main result in these changes when running tests:
 
 ![1643406520923.png](image/README/1643406520923.png)
 
