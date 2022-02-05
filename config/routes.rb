@@ -3,4 +3,8 @@ Rails.application.routes.draw do
     get 'static_pages/home'  # GET /static/pages/home
     get 'static_pages/about' # GET /static/pages/about
     get 'static_pages/help'  # GET /static/pages/help
+    get 'static_pages/login'
+    get 'static_pages/signup'
+    get 'application_controller/signup'
+
 end

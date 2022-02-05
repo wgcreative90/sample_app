@@ -1,23 +1,23 @@
-<div class="center jumbotron">
-  <h1>Welcome to the Sample App</h1>
+<% provide(:title, @home_title) %>
 
-  <h2>
-    This is the home page for the
-    <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-    sample application.
-  </h2>
-  
+  <div class="center jumbotron">
+    <h1>Welcome to the Sample App</h1>
 
-  <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
-</div>
+    <h2>
+      This is the home page for the
+        <a href="https://www.railstutorial.org/">
+          Ruby on Rails Tutorial
+        </a>
+      sample application.
+    </h2>
 
-<%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200"),
-                      "https://rubyonrails.org/" %>
+      <div class="ruby-node">
+        <%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200"), "https://rubyonrails.org/" %>
+        <%= link_to "Sign up now!", static_pages_signup_path, class: "btn btn-lg btn-primary" %>
+        <%= link_to image_tag("kitten.jpg", alt: "kitten"), "https://cdn.learnenough.com/kitten.jpg/" %>
+      </div>
 
-<%= link_to image_tag("kitten.jpg", alt: "kitten"),
-                      "https://cdn.learnenough.com/kitten.jpg/" %>
-
-
+  </div>
 
 
 
