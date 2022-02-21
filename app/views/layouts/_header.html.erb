@@ -1,15 +1,12 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <%= link_to "sample app", '/', id: "logo" %>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Login", static_pages_login_path %></li>
-        <li><%= link_to "Sign Up",   static_pages_signup_path %></li>
-        <li><%= link_to "About",   static_pages_about_path %></li>
-        <li><%= link_to "Contact", static_pages_contact_path %></li>
-        <li><%= link_to "Help",   static_pages_help_path %></li>
-        <li><a href="https://news.railstutorial.org/">News</a></li>
-      </ul>
-    </nav>
-  </div>
+title provider in application.html.erb
+<% provide(:title, "nav_header") %>
+<header
+  class="navbar navbar-fixed-top navbar-inverse">
+  <%= link_to "Login", static_pages_login_path %>
+  <%= link_to "Signup",   static_pages_signup_path %>
+  <%= link_to "Forgot Password/Username",   static_pages_signup_path %>
+  <%= link_to "About",   static_pages_about_path %>
+  <%= link_to "Contact", static_pages_contact_path %>
+  <%= link_to "Help",   static_pages_help_path %>
+  <%= link_to "Rails documentation", "https://news.railstutorial.org/" %>
 </header>
