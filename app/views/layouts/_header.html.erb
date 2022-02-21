@@ -1,11 +1,15 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "sample app", '#', id: "logo" %>
+    <%= link_to "sample app", '/', id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home",   '#' %></li>
-        <li><%= link_to "Help",   '#' %></li>
-        <li><%= link_to "Log in", '#' %></li>
+        <li><%= link_to "Home",   '/' %></li>
+        <li><%= link_to "Login", static_pages_login_path %></li>
+        <li><%= link_to "Sign Up",   static_pages_signup_path %></li>
+        <li><%= link_to "About",   static_pages_about_path %></li>
+        <li><%= link_to "Contact", static_pages_contact_path %></li>
+        <li><%= link_to "Help",   static_pages_help_path %></li>
+        <li><a href="https://news.railstutorial.org/">News</a></li>
       </ul>
     </nav>
   </div>

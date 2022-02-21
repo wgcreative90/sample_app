@@ -1,8 +1,14 @@
 <% provide(:title, "Login") %>
+<% @email, @password = "email..", "password.." %>
   <div class="center jumbotron">
     <h1>Login</h1>
-    <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
+      <form action="POST">
+          <input type="email" placeholder="email.." value=<%= @email %>  />
+          <input type="password" placeholder="password.." value=<%= @password %>/>
+        <input type="submit"/>
+      </form>
+    <%= link_to "Sign up now!", '#signup_or_login', class: "btn btn-lg btn-primary" %>
+    <%= link_to "Sign up now!", '#signup_or_login', class: "btn btn-lg btn-primary" %>
+
   </div>
   <%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200"), "https://rubyonrails.org/" %>
-  <%= link_to image_tag("kitten.jpg", alt: "kitten"), "https://cdn.learnenough.com/kitten.jpg/" %>
-<%#= image_tag("kitten.jpg", alt: "Kitten") %>

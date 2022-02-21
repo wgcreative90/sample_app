@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def find_user
-
+    
   end
 
   def authenticate_user
@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def self.hash
-    self.to_h
+    to_h
   end
 
 end
