@@ -1,8 +1,12 @@
-class User < ApplicationRecord
+class User < ActiveRecord::Base
   attr_accessor :name, :email
+  def show
+    @user = User.all.find(params[:id])
+
+  end
 
   def say_my_name
-    "Hello I am  #{user.name}"
+    @user.to_s
   end
 
 end
