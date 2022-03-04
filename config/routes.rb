@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'static_pages/help'  # GET /static/pages/help
   get 'static_pages/login'  # GET /static/pages/help
   get 'static_pages/signup' # GET /create new user
+  get 'static_pages/contact' # GET /create new user
   resources :users
 
 end
