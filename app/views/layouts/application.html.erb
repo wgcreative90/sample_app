@@ -11,13 +11,13 @@
   <body>
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
-        <%= link_to "sample app", root_path, id: "sample app root" %>
+        <%= link_to "sample app", root_path, id: "logo" %>
         <nav>
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Home",   static_pages_home_path %></li>
-            <li><%= link_to "Help",   static_pages_help_path %></li>
-            <li><%= link_to "About",   static_pages_about_path %></li>
-            <li><%= link_to "Log in", static_pages_login_path %></li>
+            <li id="lnav"><%= link_to "Home",   static_pages_home_path %></li>
+            <li id="lnav"><%= link_to "Help",   static_pages_help_path %></li>
+            <li id="lnav"><%= link_to "About",   static_pages_about_path %></li>
+            <li id="lnav"><%= link_to "Log in", static_pages_login_path %></li>
           </ul>
         </nav>
       </div>

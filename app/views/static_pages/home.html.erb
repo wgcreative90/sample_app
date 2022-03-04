@@ -1,5 +1,5 @@
 <% provide(:title, "Home") %>
-<div class="center jumbotron">
+<div class="center jumbotron " id="welcome-div">
   <h1>Welcome to the Sample App</h1>
 
   <h2>
@@ -7,16 +7,19 @@
     <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
     sample application.
   </h2>
-  
 
-  <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
+  <%= link_to "Sign up now!", static_pages_signup_path, class: "btn btn-lg btn-primary" %>
+</div>
+<div class=" center">
+  <div class="center-block text-center" id='rails-logo'>
+    <%= link_to image_tag("rails.svg", alt: "Rails logo", width: "100%"), "https://rubyonrails.org/" %>
+    <span class="bg-info">Click on me to view Ruby on Rails Documentation</span>
+  </div>
 </div>
 
-<%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200"),
-                      "https://rubyonrails.org/" %>
 
-<%= link_to image_tag("kitten.jpg", alt: "kitten"),
-                      "https://cdn.learnenough.com/kitten.jpg/" %>
+
+<%#= link_to image_tag("kitten.jpg", alt: "kitten"), "https://cdn.learnenough.com/kitten.jpg/" %>
 
 
 

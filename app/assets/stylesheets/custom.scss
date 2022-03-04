@@ -45,11 +45,22 @@ p {
 
 /* header */
 
+#lnav {
+  font-size: 1.1em;
+  color: #c77b7b;
+}
+
+#lnav:hover {
+  font-size: 1.5em;
+  background-color: #2e382e;
+  color: #b70fd7;
+}
+
 #logo {
   float: left;
-  margin-right: 10px;
+  margin: 10px;
   font-size: 1.7em;
-  color: #fff;
+  color: #c77b7b;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -57,8 +68,10 @@ p {
 }
 
 #logo:hover {
+  font-size: 2.3em;
   color: #fff;
   text-decoration: none;
+  position: center;
 }
 
 /* hides all images in application */
@@ -98,9 +111,24 @@ footer ul li {
   margin-left: 15px;
 }
 
-#login-form:focus-visible {
+form {
+  margin-top: 50px;
   position: center;
 }
+
+#welcome-div {
+  margin-top: 50px;
+}
+
+#rails-logo {
+  background-color: #090909;
+}
+
+#rails-logo:hover {
+  background-color: #5cb85c;
+  color: #2b542c;
+}
+
 
 
 
