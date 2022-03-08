@@ -40,20 +40,23 @@ h2 {
 }
 
 p {
-  font-size: 1.1em; line-height: 1.7em;
+  font-size: 1.1em;
+  line-height: 1.7em;
 }
 
 /* header */
 
 #lnav {
   font-size: 1.1em;
+}
+
+#lnav {
   color: #c77b7b;
 }
 
-#lnav:hover {
-  font-size: 1.5em;
-  background-color: #2e382e;
+#lnav {
   color: #b70fd7;
+  font-size: 120%;
 }
 
 #logo {
@@ -128,10 +131,3 @@ form {
   background-color: #5cb85c;
   color: #2b542c;
 }
-
-
-
-
-
-
-
