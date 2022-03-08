@@ -2,7 +2,11 @@
 <div class="container">
   <ol>
     <% @users.each do |user| %>
-      <li><%= user.to_json %></li>
+      <% user.attributes.map do |at|  %>
+      <li><%= at[:first_name].to_s %></li>
+      <li> <%= at[:last_name] %></li>
+      <li><%= at[:email] %></li>
+     <% end %>
     <% end %>
   </ol>
 </div>
