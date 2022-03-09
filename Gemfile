@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+gem 'bcrypt',         '3.1.13'
 gem 'bootsnap'
 gem 'bootstrap-sass', '3.4.1'
 gem 'jbuilder',   '2.10.0'
@@ -41,4 +42,3 @@ end
 # Uncomment the following line if you're running Rails
 # on a native Windows system:
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
