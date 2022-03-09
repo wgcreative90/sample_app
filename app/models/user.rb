@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   # attr_accessor :name, :email
   # before_save :downcase_email
@@ -40,11 +42,8 @@ class User < ApplicationRecord
   #   self.activation_token = User.new_token
   #   self.activation_digest = User.digest(activation_token)
   # end
-  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
 
-  validates :name,  presence: true, length: { maximum: 50 }
+  validates :email, presence: true, length: { maximum: 255 },uniqueness: { case_sensitive: false }
+  validates :name, presence: true, length: { maximum: 50 }
   validates :email, presence: true, length: { maximum: 255 }
-  validates :email, format: { with: / VALID_EMAIL_REGEX/ }
-
-
 end

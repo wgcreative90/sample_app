@@ -1,0 +1,6 @@
+<% provide(:title, "Users index page")%>
+<% @users.map do |usr| %>
+  <h1>Name: <%= usr[:name] %></h1>
+    <h2> <%= params.to_s  %></h2>
+    <h2><%= usr.attributes %></h2>
+<% end %>
