@@ -1,4 +1,4 @@
-class User
+class User < ActiveRecord::Base
   # attr_accessor :name, :email, :password_digest, :password_confirmation
   has_secure_password
 
