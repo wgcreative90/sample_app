@@ -1,5 +1,4 @@
 class RegistrationsController < ApplicationController
-  # instantiates new user
   def new
     @user = User.new
   end
@@ -18,7 +17,7 @@ class RegistrationsController < ApplicationController
   private
 
   def user_params
-    # strong parameters
     params.require(:user).permit(:email, :password, :password_confirmation)
   end
+
 end
