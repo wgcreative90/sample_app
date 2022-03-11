@@ -13,10 +13,9 @@ class UsersController < ApplicationController
       reset_session
       log_in @user
       flash[:success] = 'Welcome to the Sample App!'
-      return render redirect_to :user_show_path
-    else
-      return render redirect_to :user_new_url
+      redirect_to :user_show_path
     end
+    redirect_to :user_new_url
   end
 
   private
@@ -24,5 +23,4 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
-
 end
