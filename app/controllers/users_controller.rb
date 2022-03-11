@@ -8,14 +8,14 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new
-    if @user.save
-      reset_session
-      log_in @user
-      flash[:success] = 'Welcome to the Sample App!'
-      redirect_to :user_show_path
-    end
-    redirect_to :user_new_url
+    # @user = User.new
+    # if @user.save
+    #   reset_session
+    #   log_in @user
+    #   flash[:success] = 'Welcome to the Sample App!'
+    #   redirect_to :user_show_path
+    # end
+    # redirect_to :user_new_url
   end
 
   private

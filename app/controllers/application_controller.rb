@@ -1,14 +1,17 @@
-class ApplicationController < ActiveRecord::Base
-    before_action :set_current_user
 
+class ApplicationController < ActionController::Base
+    before_action :set_current_user
     def set_current_user
-      # finds user with session data and stores it
-      Current.user = User.find_by(id: session[:user_id]) if !(session[:user_id].nil?) ;end
+      # finds user with session data and stores it if present
+      if session[:user_id]
+      Current.user = User.find_by(id: session[:user_id]) 
+      end
     end
 
     def require_user_logged_in!
       # allows only logged in user
-      redirect_to sign_in_path, alert: 'You must be signed in' if Current.user.nil?; end
+      redirect_to sign_in_path, alert: 'You must be signed in' if Current.user.nil?
     end
+  end
 
-end
+
