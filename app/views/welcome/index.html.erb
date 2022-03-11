@@ -1,6 +1,15 @@
-<%=  provide(:title, 'Log In') %>
-<h1>Rails Authentication</h1>
-<div>
-	 <%= yield '_login_form.html.erb' %>
+<% provide(:title, 'Login or Signup') %>
+<div class="center jumbotron " id="welcome-div">
+  <h1>Welcome to the Sample App</h1>
+	<h3>User authentication or registration</h3>
+	<%= link_to "Ruby on Rails Tutorial", url: "https://www.railstutorial.org/" %><br>
+	<%= link_to "Login", log_in_path, class: "btn btn-lg btn-primary" %>
+  <%= link_to "Sign up", sign_up_path, class: "btn btn-lg btn-secondary" %>
+</div>
+<div class=" center">
+  <div class="center-block text-center" id='rails-logo'>
+    <%= link_to image_tag("rails.svg", alt: "Rails logo", width: "50%"), "https://rubyonrails.org/" %>
+    <span class="bg-info">Click on me to view Ruby on Rails Documentation</span>
+  </div>
 </div>
 

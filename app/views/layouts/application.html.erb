@@ -14,10 +14,10 @@
     <div class="container">
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container margin-top margin-right margin-left">
-        <%= link_to "sample app", root_path, id: "logo" %>
+        <%= link_to "sample app", landing_path_url, id: "logo" %>
         <nav>
           <ul class="nav navbar-nav navbar-right">
-            <li id="lnav"><%= link_to 'landing', root_path %> </li>
+            <li id="lnav"><%= link_to 'landing', landing_path_url %> </li>
             <li id="lnav"><%= link_to 'help', help_path %> </li>
             <li id="lnav"><%= link_to 'about', about_path  %> </li>
             <li id="lnav"><%= link_to 'log in', log_in_path %> </li>
@@ -25,7 +25,9 @@
         </nav>
       </div>
     </header>
+    <br>
      <p class="notice"><%= notice %></p>
+     <br>
      <p class="alert"><%= alert %></p>
     <%= yield %>
     <%= render 'layouts/footer' %>

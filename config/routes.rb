@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
+  root 'welcome#index', as: 'landing_path'
   get 'sign_up', to: 'registrations#new'
   post 'sign_up', to: 'registrations#create'
   get 'sign_in', to: 'sessions#new'
@@ -13,8 +13,9 @@ Rails.application.routes.draw do
   patch 'password/reset/edit', to: 'password_resets#update'
 
   get    'help',    to: 'static_pages#help'
-  get    '/about',   to: 'static_pages#about'
-  get    '/contact', to: 'static_pages#contact'
-  resources :users
+  get    'about',   to: 'static_pages#about'
+  get    'contact', to: 'static_pages#contact'
+
+  resources :users, only: %i[new create destroy edit update]
   resources :account_activations, only: [:edit]
 end
