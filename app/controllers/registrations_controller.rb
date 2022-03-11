@@ -1,6 +1,6 @@
  class RegistrationsController < ApplicationController
     # instantiates new user
-    attr_accessor @user
+    attr_accessor :user
     def new
       @user = User.new
     end

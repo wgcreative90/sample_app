@@ -1,4 +1,4 @@
-class Current < ActiveRecord::Base
+class Current < ActiveSupport::CurrentAttributes
     # makes Current.user accessible in view files.
-     attribute: User.current
+    attribute :user
 end
