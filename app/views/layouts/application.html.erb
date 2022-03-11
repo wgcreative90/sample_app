@@ -15,10 +15,10 @@
         <%= link_to "sample app", root_path, id: "logo" %>
         <nav>
           <ul class="nav navbar-nav navbar-right">
-            <li id="lnav"><%= link_to 'home', label:false  %></li>
-            <li id="lnav"><%= link_to 'help', label:false %></li>
-            <li id="lnav"><%= link_to 'about', label:true  %></li>
-            <li id="lnav"><%= link_to 'login', label: true %></li>
+            <li id="lnav"><%= link_to 'home', root_path %> </li>
+            <li id="lnav"><%= link_to 'help', help_path %> </li>
+            <li id="lnav"><%= link_to 'about', about_path  %> </li>
+            <li id="lnav"><%= link_to 'login', login_path %> </li>
           </ul>
         </nav>
       </div>

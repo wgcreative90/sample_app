@@ -1,0 +1,13 @@
+<%= provide(:title, 'Login') %>
+<%= form_for :user do |f| %>
+  <%= f.label :email %>:
+  <%= f.text_field :email %><br />
+  <%= f.label :password_digest, "password" %>:
+  <%= f.text_field :password_digest %>
+  <br />
+  <br />
+  <div class="submit button primary " id='login'>
+    <%= f.submit %>
+  </div>
+
+<% end %>
