@@ -1,6 +1,8 @@
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
+ <head>
+
     <title><%= full_title(yield(:title)) %></title>
     <meta charset="utf-8">
     <title>Sample Micropost App</title>
@@ -8,7 +10,9 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
+
   <body>
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
@@ -23,9 +27,11 @@
         </nav>
       </div>
     </header>
-    <div class="container">
-      <%= yield %>
-      <%= render 'layouts/footer' %>
-    </div>
-  </body>
+
+     <p class="notice"><%= notice %></p>
+     <p class="alert"><%= alert %></p>
+    <%= yield %>
+    <%= render 'layouts/footer' %>
+   </body>
+
 </html>
