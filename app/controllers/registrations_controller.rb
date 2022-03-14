@@ -4,11 +4,11 @@ class RegistrationsController < ApplicationController
     @user = User.new
   end
 
-  # If user saves successfully with status, 200, saves iser id in a session.
   def create
     @user = User.new(user_params)
     if @user.save
-      # stores saved user id in a session
+      WelcomeMailer.with(user: @user).welcome_email.deliver_now
+      # deliver_now is provided by ActiveJob.
       session[:user_id] = @user.id
       redirect_to root_path, notice: 'Successfully created account'
     else
