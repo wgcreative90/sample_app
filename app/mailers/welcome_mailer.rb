@@ -1,4 +1,4 @@
-class WelcomeMailer > ApplicationMailer
+class WelcomeMailer < ApplicationMailer
     # sends a welcome email
     def welcome_email
       @user = params[:user]
