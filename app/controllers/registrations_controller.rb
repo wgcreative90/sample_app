@@ -6,14 +6,14 @@ class RegistrationsController < ApplicationController
 
     def create
       @user = User.new(user_params)
-      if @user.save
+      if @user.save 
       # stores saved user id in a session
         session[:user_id] = @user.id
         flash[:notice] = "USER CREATED, REDIRECTING YOU..."
         redirect_to user_path(@user), flash[:notice] = "Successfully created account"
       else
         flash[:notice] = "Something went wrong, please try again."
-        PasswordResetsController.gen_temporary_password & redirect_to 
+        redirect_to 'user#new'
       end
     end
 
