@@ -1,24 +1,25 @@
 class RegistrationsController < ApplicationController
-  def new
-    @user = User.new
-  end
+    # instantiates new user
+    def new
+      @user = User.new
+    end
 
-  def create
-    @user = User.new(user_params)
-    if @user.save
-      WelcomeMailer.with(user: @user).welcome_email.deliver_now
-      # deliver_now is provided by ActiveJob.
-      session[:user_id] = @user.id
-      redirect_to root_path, notice: 'Successfully created account'
-    else
-      render :new
+    def create
+      @user = User.new(user_params)
+      if @user.save
+      # stores saved user id in a session
+        session[:user_id] = @user.id
+        flash[:notice] = "USER CREATED, REDIRECTING YOU..."
+        redirect_to user_path(@user), flash[:notice]: "Successfully created account"
+      else
+        render :new
+      end
+    end
+
+    private
+
+    def user_params
+      # strong parameters
+      params.require(:user).permit(:email, :password, :password_confirmation)
     end
   end
-
-  private
-
-  def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
-  end
-
-end
