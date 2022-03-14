@@ -1,8 +1,10 @@
 class RegistrationsController < ApplicationController
+  # Instanciates new user
   def new
     @user = User.new
   end
 
+  # If user saves successfully with status, 200, saves iser id in a session.
   def create
     @user = User.new(user_params)
     if @user.save
@@ -16,8 +18,8 @@ class RegistrationsController < ApplicationController
 
   private
 
+  #strong parameters
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation)
   end
-
 end

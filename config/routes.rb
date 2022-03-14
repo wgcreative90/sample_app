@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  root 'welcome#index', as: 'landing_path'
+  # root_path is:
+  root 'welcome#index'
+  
+  # User sign_up and sign_in with seesions and password reset notifications.
   get 'sign_up', to: 'registrations#new'
   post 'sign_up', to: 'registrations#create'
   get 'sign_in', to: 'sessions#new'
@@ -12,10 +15,12 @@ Rails.application.routes.draw do
   get 'password/reset/edit', to: 'password_resets#edit'
   patch 'password/reset/edit', to: 'password_resets#update'
 
+  # User Resouces
+  resources :users, only: [:create, :show, :index, :new, :create]
+
+  # Static Pages: Help, About, Contact
   get    'help',    to: 'static_pages#help'
   get    'about',   to: 'static_pages#about'
   get    'contact', to: 'static_pages#contact'
 
-  resources :users, only: %i[new create destroy edit update]
-  resources :account_activations, only: [:edit]
 end
