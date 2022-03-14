@@ -1,6 +1,5 @@
 class PasswordResetsController < ApplicationController
     def new
-      
     end
 
     def edit
@@ -18,7 +17,7 @@ class PasswordResetsController < ApplicationController
       # deliver_later is provided by ActiveJob
     end
     redirect_to root_path, notice: 'Please check your email to reset the password'
-  end
+    end
 
     def update
       # updates user's password
@@ -35,4 +34,5 @@ class PasswordResetsController < ApplicationController
     def password_params
       params.require(:user).permit(:password, :password_confirmation)
     end
+
   end
