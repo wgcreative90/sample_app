@@ -1,7 +1,19 @@
 Rails.application.routes.draw do
+resources :users
+
+  get 'microposts/show'
+  get 'microposts/index'
+  get 'microposts/new'
+  get 'microposts/create'
+  get 'microposts/edit'
+  get 'microposts/update'
+  get 'microposts/delete'
+
   root 'welcome#index'
 
-  resources :users
+  get    'help',    to: 'static_pages#help'
+  get    'about',   to: 'static_pages#about'
+  get    'contact', to: 'static_pages#contact'
 
   get 'sign_up', to: 'registrations#new'
   post 'sign_up', to: 'registrations#create'
@@ -14,13 +26,5 @@ Rails.application.routes.draw do
   post 'password/reset', to: 'password_resets#create'
   get 'password/reset/edit', to: 'password_resets#edit'
   patch 'password/reset/edit', to: 'password_resets#update'
-  get    'help',    to: 'static_pages#help'
-  get    'about',   to: 'static_pages#about'
-  get    'contact', to: 'static_pages#contact'
-  # User Resouces
-  
-
-  # Static Pages: Help, About, Contact
-  
 
 end

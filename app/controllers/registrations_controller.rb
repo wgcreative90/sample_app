@@ -10,9 +10,10 @@ class RegistrationsController < ApplicationController
       # stores saved user id in a session
         session[:user_id] = @user.id
         flash[:notice] = "USER CREATED, REDIRECTING YOU..."
-        redirect_to user_path(@user), flash[:notice]: "Successfully created account"
+        redirect_to user_path(@user), flash[:notice] = "Successfully created account"
       else
-        render :new
+        flash[:notice] = "Something went wrong, please try again."
+        PasswordResetsController.gen_temporary_password & redirect_to 
       end
     end
 
