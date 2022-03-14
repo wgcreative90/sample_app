@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_14_123855) do
+ActiveRecord::Schema.define(version: 2022_03_14_181705) do
 
   create_table "action_mailbox_inbound_emails", force: :cascade do |t|
     t.integer "status", default: 0, null: false
@@ -55,6 +55,16 @@ ActiveRecord::Schema.define(version: 2022_03_14_123855) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_microposts_on_user_id"
+  end
+
+  create_table "user_posts", force: :cascade do |t|
+    t.text "title"
+    t.integer "user_id"
+    t.integer "micropost_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["micropost_id"], name: "index_user_posts_on_micropost_id"
+    t.index ["user_id"], name: "index_user_posts_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

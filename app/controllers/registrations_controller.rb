@@ -9,7 +9,7 @@ class RegistrationsController < ApplicationController
       if @user.save 
       # stores saved user id in a session
         session[:user_id] = @user.id
-        flash[:notice] = "USER CREATED, REDIRECTING YOU..."
+        flash[:notice] = "Welcome" + @user.email.to_s
         redirect_to @user
       else
         flash[:notice] = "Something went wrong, please try again."

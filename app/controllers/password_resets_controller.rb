@@ -1,6 +1,5 @@
 class PasswordResetsController < ApplicationController
     def new
-      @user = Password.new()
     end
 
     def edit
@@ -14,7 +13,7 @@ class PasswordResetsController < ApplicationController
     @user = User.find_by(email: params[:email])
     if @user.present?
       # send mail
-      PasswordMailer(user: @user).reset.deliver_later
+      PasswordMailer.edit_password(user: @user).reset.deliver_later
       # deliver_later is provided by ActiveJob
     end
     redirect_to root_path, notice: 'Please check your email to reset the password'
