@@ -1,5 +1,7 @@
 class PasswordResetsController < ApplicationController
-    def new; end
+    def new
+      
+    end
 
     def edit
       # finds user with a valid token
@@ -23,5 +25,4 @@ class PasswordResetsController < ApplicationController
     def password_params
       params.require(:user).permit(:password, :password_confirmation)
     end
-    
   end
